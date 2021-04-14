@@ -1,0 +1,51 @@
+.discount {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  padding: 3% 10%;
+  position: relative;
+}
+.discount_buy button {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin: 20px 0 10px 0;
+}
+.discount_warn p {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: 300;
+}
+.discount_inner_form_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.discount_inner_form input {
+  width: 300px;
+  height: 30px;
+  margin: 5px;
+}
+.discount_inner_form_btn {
+  margin: 10px 0;
+}
+.discount_loading {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.discount_loading img {
+  width: 200px;
+}

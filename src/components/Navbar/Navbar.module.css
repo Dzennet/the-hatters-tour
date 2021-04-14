@@ -1,0 +1,159 @@
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+/* Логотип навбара */
+
+.navbar_logo {
+  width: 120px;
+  height: 100px;
+  margin: auto;
+}
+.navbar_logo img {
+  width: 100%;
+  height: 100%;
+}
+.navbar_logo span {
+  font-size: 8px;
+}
+
+/* Меню навбара */
+
+.navbar_content_menu {
+  display: flex;
+  background-color: #f8f8f8;
+  height: 75px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar_content_menu_links {
+  display: flex;
+  flex-direction: row;
+}
+.navbar_content_menu_link a {
+  font-size: 0.8125rem;
+  font-weight: 400;
+}
+.navbar_content_menu_link {
+  margin-right: 10px;
+}
+/* Социальные сети */
+
+.navbar_content_socials {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+.navbar_content_socials a {
+  display: flex;
+  margin: 8px;
+}
+
+/* Меню бургер */
+
+.navbar_burger {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar_logo {
+    margin: 0;
+  }
+
+  .navbar_content_socials {
+    display: none;
+  }
+  .navbar_content_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    overflow: auto;
+    top: 0;
+    top: -100%;
+    transition: all 0.4s ease 0s;
+  }
+  .navbar_content_menu.active {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .navbar_content_menu_links {
+    flex-direction: column;
+  }
+
+  .navbar_content_menu_link a {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .navbar_content_menu button {
+    display: none;
+  }
+  /* Меню бургер */
+
+  .navbar_burger {
+    margin-top: 80%;
+    display: block;
+    position: relative;
+    top: 2px;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .navbar_burger::before,
+  .navbar_burger::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    height: 3px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .navbar_burger::before {
+    top: 0;
+  }
+  .navbar_burger::after {
+    bottom: 0;
+  }
+  .navbar_burger span {
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    height: 3px;
+    left: 0;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .navbar_burger.active::before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .navbar_burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .navbar_burger.active span {
+    transform: scale(0);
+  }
+}

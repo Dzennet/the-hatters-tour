@@ -1,0 +1,24 @@
+.video {
+  width: 90%;
+  margin: 0 auto;
+}
+.video_items {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.video_item {
+  min-width: 24%;
+  margin: 1px;
+}
+
+@media (max-width: 767px) {
+  .video_items {
+    justify-content: center;
+  }
+  .video_item {
+    min-width: 80%;
+    margin: 1px;
+  }
+}
